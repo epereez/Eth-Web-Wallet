@@ -45,7 +45,7 @@ if os.getenv("PRIVATE_KEY") is None:
 
 #TRANSACTIONS
 
-def makeTransaction(recipientAddress,)
+"""def makeTransaction(recipientAddress,)
 
 
 transaction = {
@@ -70,7 +70,7 @@ transaction = {
             'storageKeys': ()
         },
     )
-}
+}"""
 
 #SOURCES
 #https://web3py.readthedocs.io/en/stable/web3.eth.account.html#eth-account
