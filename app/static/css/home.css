@@ -1,0 +1,19 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+h1 {
+    font-size: 200px;
+    color: #C2D9FF;
+    text-align: center;
+}

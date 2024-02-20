@@ -4,7 +4,7 @@ from web3 import Web3, exceptions
   
 load_dotenv()  
   
-infura_url = os.getenv("INFURA_PROVIDER") 
+infura_url = os.getenv("INFURA_MAINNET") 
 private_key = os.getenv('PRIVATE_KEY')   
 web3 = Web3(Web3.HTTPProvider(infura_url))  
 
