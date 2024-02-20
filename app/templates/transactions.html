@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/transactions.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <title>Wallet</title>
@@ -35,9 +35,17 @@
             </div>
         </nav>
     </div>
-    <div class="container" id="balanceContainer">
-        <h1>{{Balance}}€</h1>
-        <h2>{{Balance_eth}}</h2>  
+    <div id="parent-rectangle">
+        <div class="rectangle">
+            <div class="input-group">
+                <input type="text" placeholder="Recipient Address">
+                <input type="text" placeholder="Amount">
+            </div>
+            <div class="button-group">
+                <button type="button">Send</button>
+                <button type="button">Recieve</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>
