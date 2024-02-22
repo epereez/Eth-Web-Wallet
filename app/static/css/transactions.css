@@ -40,6 +40,10 @@ body{
   width: 100%;
   margin-bottom: 20px; /* Space between inputs and buttons */
 }
+.numericbalances{
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium';
+}
 
 /* Inputs styling */
 input[type="text"] {

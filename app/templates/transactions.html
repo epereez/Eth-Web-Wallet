@@ -29,7 +29,7 @@
                         <a class="nav-link" href="/transactions">Transactions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link" href="/view">View</a>
                     </li>
                 </ul>
             </div>
@@ -37,14 +37,20 @@
     </div>
     <div id="parent-rectangle">
         <div class="rectangle">
-            <div class="input-group">
-                <input type="text" placeholder="Recipient Address">
-                <input type="text" placeholder="Amount">
-            </div>
             <div class="button-group">
-                <button type="button">Send</button>
-                <button type="button">Recieve</button>
+                <p class="numericbalances">{{Balance}}</p>
+                <p class="numericbalances">{{Balance_eth}}</p>
             </div>
+            <form id="transactionform">
+                <div class="input-group">
+                    <input type="text" placeholder="Recipient Address" id="address">
+                    <input type="text" placeholder="Amount" id="amount">
+                </div>
+                <div class="button-group">
+                    <button type="submit">Send</button>
+                    <button type="button">Recieve</button>
+                </div>
+            </form>
         </div>
     </div>
 </body>

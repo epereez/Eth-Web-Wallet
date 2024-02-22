@@ -2,11 +2,19 @@ from utils.env_management import store_key_env
 from web3 import Web3
 import os
 
-InfuraProvider = os.getenv("INFURA_MAINNET")
+#MAINNET
 
-w3 = Web3(Web3.HTTPProvider(InfuraProvider))
+'''InfuraProvider = os.getenv('INFURA_KEY')
+
+w3 = Web3(Web3.HTTPProvider(f'https://mainnet.infura.io/v3/{InfuraProvider}'))'''
+
+#TESTNET
+
+BlastTestnet = os.getenv("BLAST_KEY")
+w3 = Web3(Web3.HTTPProvider(f"https://eth-sepolia.blastapi.io/{BlastTestnet}"))
 
 
+print("Is connected:", w3.is_connected())
 
 #If there is no private key, create it (For New Users)
 def generate_store_keys():

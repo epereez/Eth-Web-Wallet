@@ -41,12 +41,12 @@ def get_24h_change():
 def get_7d_change():
     response = requests.get(url, headers=headers, params=parameters)
     response_json = response.json()
-    change7d = response_json['data'][eth_symbol]['quote']['EUR']['percent_change_24h']
+    change7d = response_json['data'][eth_symbol]['quote']['EUR']['percent_change_7d']
     return change7d
 def get_30d_change():
     response = requests.get(url, headers=headers, params=parameters)
     response_json = response.json()
-    change30d = response_json['data'][eth_symbol]['quote']['EUR']['percent_change_24h']
+    change30d = response_json['data'][eth_symbol]['quote']['EUR']['percent_change_30d']
     return change30d
 
 get_ethprice()

@@ -2,3 +2,5 @@ SOURCES
 https://web3py.readthedocs.io/en/stable/web3.eth.account.html#eth-account
 https://docs.infura.io/api/
 https://flask.palletsprojects.com/en/3.0.x/
+https://pandas.pydata.org/docs/
+https://plotly.com/python/

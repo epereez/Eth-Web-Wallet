@@ -1,0 +1,107 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.bg-black {
+    background-color: #070F2B;
+}
+
+#logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.navbar-brand {
+    padding: 14px 20px;
+    font-size: 16px;
+}
+
+.navbar-nav {
+    width: 100%;
+}
+
+.nav-item {
+    padding: 6px 14px;
+    text-align: center;
+}
+
+.nav-link {
+    padding-bottom: 10px; 
+}
+
+.v-line {
+    background-color: gray;
+    width: 1px;
+    height: 20px;
+}
+
+.navbar-collapse.collapse.in {
+    display: block !important;
+}
+
+@media (max-width: 576px) {
+    .nav-item {
+        width: 100%;
+        text-align: left;
+    }
+
+    .v-line {
+        display: none;
+    }
+}
+
+.panel-container {
+    display: flex; /* This will align the panels horizontally */
+    justify-content: center;
+    gap: 20px; /* Adds space between the panels */
+}
+
+.panel {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px; /* Rounds the edges */
+    background-color: #070F2B; /* Sets a solid background color */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
+    width: 300px;
+}
+
+.time-frame {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.percentage {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
+
+.plotly-graph-container {
+    width: 940px;
+    margin: auto;  /* This centers the div */
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #070F2B;
+    border-radius: 15px; /* Adjust this value to get the desired border curvature */
+    overflow: hidden;
+
+}

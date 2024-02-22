@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/view.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <title>Wallet</title>
@@ -35,9 +35,16 @@
             </div>
         </nav>
     </div>
-    <div class="container" id="balanceContainer">
-        <h1>{{Balance}}€</h1>
-        <h2>{{Balance_eth}}</h2>  
+    <div class="plotly-graph-container">
+        {{ graph_html|safe }}
+    </div>
+    <div class="panel-container">
+        {% for key, value in data.items() %}
+        <div class="panel">
+            <div class="time-frame">{{ key }}</div>
+            <div class="percentage {{ 'positive' if value > 0 else 'negative' }}">{{ value }}%</div>
+        </div>
+        {% endfor %}
     </div>
 </body>
 </html>
