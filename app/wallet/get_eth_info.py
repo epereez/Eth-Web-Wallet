@@ -29,7 +29,7 @@ def get_ethprice():
         return eth_price_decimal
 
     except KeyError as e:
-        print(f"Key error encountered: {e}. Check the JSON path.")
+        print(f"Key error encountered: {e}.")
     except Exception as e:
         print(f"Couldn't retrieve Ethereum price: {e}")
 

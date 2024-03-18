@@ -10,8 +10,8 @@ w3 = Web3(Web3.HTTPProvider(f'https://mainnet.infura.io/v3/{InfuraProvider}'))''
 
 #TESTNET
 
-BlastTestnet = os.getenv("BLAST_KEY")
-w3 = Web3(Web3.HTTPProvider(f"https://eth-sepolia.blastapi.io/{BlastTestnet}"))
+INFURA_KEY = os.getenv("INFURA_KEY")
+w3 = Web3(Web3.HTTPProvider(f"https://sepolia.infura.io/v3/{INFURA_KEY}"))
 
 
 print("Is connected:", w3.is_connected())

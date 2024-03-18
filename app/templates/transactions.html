@@ -37,9 +37,9 @@
     </div>
     <div id="parent-rectangle">
         <div class="rectangle">
-            <div class="button-group">
-                <p class="numericbalances">{{Balance}}</p>
-                <p class="numericbalances">{{Balance_eth}}</p>
+            <div class="button-group" id="displays">
+                <p class="numericbalances">{{Balance}}€</p>
+                <p class="numericbalances">{{Balance_eth}}eth</p>
             </div>
             <form id="transactionform">
                 <div class="input-group">
@@ -47,11 +47,38 @@
                     <input type="text" placeholder="Amount" id="amount">
                 </div>
                 <div class="button-group">
+                    <button type="button" id="openPopupBtn">Recieve</button>
                     <button type="submit">Send</button>
-                    <button type="button">Recieve</button>
                 </div>
             </form>
         </div>
     </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <p id="popupText">{{ recieve_popup }}</p>
+        </div>
+    </div>
+
+    <script>
+        var popup = document.getElementById("popup");
+        var openBtn = document.getElementById("openPopupBtn");
+        var closeBtn = document.querySelector(".close-btn");
+    
+        openBtn.onclick = function() {
+            popup.style.display = "block";
+        }
+    
+        closeBtn.onclick = function() {
+            popup.style.display = "none";
+        }
+    
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        }
+    </script>
+    
 </body>
 </html>

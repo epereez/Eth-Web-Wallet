@@ -22,7 +22,8 @@ def home():
 
 @app.route('/transactions')
 def transactions():
-    return render_template('transactions.html',Balance=convert_eth_eur(),Balance_eth=round(get_eth_balance(os.getenv("ACCOUNT")),5))
+    recieve_popup = os.getenv("ACCOUNT")
+    return render_template('transactions.html',Balance=convert_eth_eur(),Balance_eth=round(get_eth_balance(os.getenv("ACCOUNT")),5),recieve_popup=recieve_popup)
 
 @app.route('/view')
 def view():

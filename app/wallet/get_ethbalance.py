@@ -2,8 +2,8 @@ import httpx, json, os
 from decimal import Decimal
 from web3 import Web3
 
-BlastTestnet = os.getenv("BLAST_KEY")
-w3 = Web3(Web3.HTTPProvider(f"https://eth-sepolia.blastapi.io/{BlastTestnet}"))
+INFURA_KEY = os.getenv("INFURA_KEY")
+w3 = Web3(Web3.HTTPProvider(f"https://sepolia.infura.io/v3/{INFURA_KEY}"))
 
 #GET CURRENT ETH BALANCE 
 
@@ -27,7 +27,8 @@ def get_eth_balance(address):
     if not w3.is_connected():
         print("Failed to connect to the Ethereum network")
         return
-    balance_wei = w3.eth.get_balance(address)
-    #balance_ether = w3.fromWei(balance_wei, 'ether')
-    return balance_wei
+    checksum_address = w3.to_checksum_address("0xd2004187aea91c9bf85b39eee12a2ab562656632")
+    balance_wei = w3.eth.get_balance(checksum_address)
+    balance_ether = Decimal(balance_wei/10**18)
+    return balance_ether
 

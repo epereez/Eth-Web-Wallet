@@ -1,4 +1,4 @@
-/* General body styling */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -16,63 +16,63 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
+    justify-content: center;
+    align-items: center; 
     
 }
 
 /* Rectangle styling */
 .rectangle {
-  width: 50%; /* Adjust width as needed */
-  max-width: 450px; /* Maximum width */
-  background-color: #0c051d; /* Rectangle color */
-  border-radius: 20px; /* Rounded corners */
+  width: 50%; 
+  max-width: 450px;
+  background-color: #0c051d;
+  border-radius: 20px; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px; /* Space inside the rectangle */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
+  padding: 20px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
   margin-bottom: 100px;
 }
 
-/* Input group styling */
+
 .input-group {
   width: 100%;
-  margin-bottom: 20px; /* Space between inputs and buttons */
+  margin-bottom: 20px;
 }
 .numericbalances{
     font-size: 60px;
     font-family: 'Franklin Gothic Medium';
 }
 
-/* Inputs styling */
+
 input[type="text"] {
-  width:100%; /* Adjust based on preference */
+  width:100%;
   padding: 10px;
-  margin: 10px 0; /* Space between inputs */
+  margin: 10px 0; 
   border: 1px solid #ccc;
-  border-radius: 10px; /* Rounded corners for inputs */
+  border-radius: 10px; 
 }
 
-/* Button group styling */
+
 .button-group {
   width: 100%;
   display: flex;
-  justify-content: space-around; /* Space between buttons */
+  justify-content: space-around;
 }
 
-/* Buttons styling */
+
 button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px; /* Rounded corners for buttons */
-  background-color: #007bff; /* Bootstrap primary color */
-  color: white;
-  cursor: pointer;
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 20px; 
+    background-color: #241741; 
+    color: white;
+    cursor: pointer;
 }
-
+  
 button:hover {
-  background-color: #0056b3; /* Darker on hover */
+    background-color: #180f2c; 
 }
 
 .bg-black {
@@ -111,6 +111,53 @@ button:hover {
 
 .navbar-collapse.collapse.in {
     display: block !important;
+}
+
+#displays {
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 20px; 
+    color: aliceblue;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.close-btn {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 @media (max-width: 576px) {
